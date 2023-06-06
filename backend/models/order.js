@@ -11,9 +11,23 @@ const OrderSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User'
   },
-  total: {
+  totalAmount: {
     type: Number,
     default: 0
+  },
+  status: {
+    type: String,
+    enum: ['not shipped', 'shipped'],
+    default: "not shipped"
+  },
+  address: {
+    type: String,
+    required: true
+  },
+  paymentType: {
+    type: String,
+    enum: ['Credit Card', 'Debit Card', 'Cash on delivery'],
+    required: true
   },
   updated: Date,
   created: {
