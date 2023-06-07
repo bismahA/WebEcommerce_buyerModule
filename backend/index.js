@@ -3,6 +3,8 @@ const express=require("express");
 const cors = require("cors");
 const productRoute=require("./routes/productRoute")
 const catRoute=require("./routes/categoryRoute")
+const cartRoute=require("./routes/cartRoute")
+const userRoute=require("./routes/userRoute")
 
 require('dotenv').config();
 const app=express();
@@ -22,5 +24,7 @@ app.listen(process.env.PORT || 3000,()=>{
 
 app.use("/product",productRoute)
 app.use("/category",catRoute)
+app.use("/cart",cartRoute)
+app.use("/user",userRoute)
 
 

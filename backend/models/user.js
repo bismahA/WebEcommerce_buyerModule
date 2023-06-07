@@ -1,32 +1,32 @@
 const mongoose=require("mongoose");
 
 const userSchema=mongoose.Schema({
-    username:{
-        type:String,
-        unique:true,
-        min:3,
-        max:30
-    },
-    firstName:{
-        type:String
-    },
-    lastName:{
-        type:String
-    },
     email:{
         type:String,
+        required:true,
         unique:true,
-        required:true
-
+       
+    },
+    firstName:{
+        type:String,
+        required:false
+    },
+    lastName:{
+        type:String,
+        required:false
     },
 
     password:{
         type:String,
         required:true,
     },
+    confirmPass:{
+        type:String,
+        required:false
+    },
     role:{
         type:String,
-        default:"buyer"
+        default:'buyer'
     }
 },
 {timestamps:true}

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom"
+import { Link,Route ,useNavigate} from "react-router-dom"
 import axios from 'axios';
-import ProductGrid from "./ProductGrid"
+
 import "../css/style.css"
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState(null);
+    const navigate=useNavigate();
 
 
     useEffect(() => {
@@ -24,9 +24,10 @@ const Home = () => {
     };
     console.log(categories)
     const handleCategoryClick = (category1) => {
-        // Pass the category ID and name as props to the ProductGrid component
-        // You can navigate to a different route or perform any other action as per your requirement
-        setSelectedCategory(category1);
+       
+       // setSelectedCategory(category1);
+        navigate("/productGrid",{state:{category1:category1}})
+        
         console.log('Category ID:', category1._id);
         console.log('Category Name:', category1.name);
       };
@@ -59,7 +60,7 @@ const Home = () => {
                     
                 ))}
             </div>
-            {selectedCategory && <ProductGrid category={selectedCategory} />}
+            {/* {selectedCategory && <ProductGrid category={selectedCategory} />} */}
         </div>
     );
 };

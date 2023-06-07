@@ -194,11 +194,78 @@ a
 }
 
 .product-button img {
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 50%;
+  max-height: 50%;
   object-fit: cover;
 }
 
 .product-button:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
+/* CSS for ProductDetail component */
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.product-image img {
+  width: 600px;
+  height: 750px;
+  border-radius: 7%;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'gazB3', sans-serif;
+  color: #99c2ff;
+  font-size: 28px;
+  -webkit-text-stroke: 1px black;
+}
+
+.product-info p {
+  font-family: 'gazB', sans-serif;
+  color: black;
+}
+
+.product-info select {
+  width: 200px;
+  padding: 8px;
+  font-family: 'gazB', sans-serif;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.product-info button {
+  width: 150px;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #99c2ff;
+  border-radius: 5px;
+  font-family: 'gazB3', sans-serif;
+  color: #99c2ff;
+  font-size: 24px;
+  -webkit-text-stroke: 1px black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-info button:hover {
+  background-color: #99c2ff;
+  color: white;
+}
+
+/* Rest of the provided CSS styles */
+/* ... */

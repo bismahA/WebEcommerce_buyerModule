@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './components/Home';
 import ProductGrid from './components/ProductGrid'
+import ProductDetails from './components/ProductDetails'
 
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/category/:category" element={<ProductGrid />} />
+        <Route path="/productGrid" element={<ProductGrid />} />
+        <Route path="/productDetails" element={<ProductDetails />} />
+        
         
         {/* Add more routes as needed */}
       </Routes>
