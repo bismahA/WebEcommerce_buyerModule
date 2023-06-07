@@ -22,17 +22,13 @@ const productSchema = new Schema({
     type:Number,
     required:true
   },
-  imageProps: {
-    name:{
-      type: String,
+  imageUrl: {
+    type: String,
     required: true
-    },
-    image:{
-      data:Buffer,
-      contentType:String
-    }
-
-    
+  },
+  category: {
+    type: Schema.Types.ObjectId,
+    ref: 'ProductCategory'
   }
 });
 

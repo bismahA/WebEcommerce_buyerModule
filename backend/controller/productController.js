@@ -1,4 +1,5 @@
 const productModel=require("../models/product");
+const CategoryModel=require("../models/categories")
 
 let viewProduct=async(req,res)=>{
     try {
@@ -47,9 +48,32 @@ let filterByBrand=async(req,res)=>{
   }
 }
 
+let filterByCategory=async(req,res)=>{
+        const categoryId = req.query.category;
+      
+        try {
+          // Find the category based on the provided category name
+          const category = await CategoryModel.findById(categoryId);
+      
+          if (!category) {
+            return res.status(404).json({ error: 'Category not found' });
+          }
+      
+          // Fetch the products associated with the category
+          const products = await productModel.find({ category: category._id });
+      
+          res.status(200).json(products);
+        } catch (error) {
+          res.status(500).json({ error: 'Failed to filter products by category' });
+        }
+      
+      
+}
+
 module.exports={
     viewProduct,
     searchViaKeyword,
     filterByPrice,
-    filterByBrand
+    filterByBrand,
+    filterByCategory
 }
