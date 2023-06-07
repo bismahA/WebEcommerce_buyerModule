@@ -1,5 +1,6 @@
 const mongoose=require("mongoose");
 const express=require("express");
+const productRoute=require("./routes/productRoute")
 
 require('dotenv').config();
 const app=express();
@@ -17,5 +18,6 @@ app.listen(process.env.PORT || 3000,()=>{
     console.log(`ho gaya ${process.env.PORT} par connect ab jo karna hay karo`);
 })
 
+app.use("/product",productRoute)
 
 

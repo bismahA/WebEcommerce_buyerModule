@@ -22,9 +22,17 @@ const productSchema = new Schema({
     type:Number,
     required:true
   },
-  imageUrl: {
-    type: String,
+  imageProps: {
+    name:{
+      type: String,
     required: true
+    },
+    image:{
+      data:Buffer,
+      contentType:String
+    }
+
+    
   }
 });
 
