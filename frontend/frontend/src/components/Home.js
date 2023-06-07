@@ -39,12 +39,12 @@ const Home = () => {
 
             <nav className="navbar">
                 <div className="logo">
-                    <Link to="/">دورہ فِروشی سینٹر</Link>
+                    <Link to="/home">دورہ فِروشی سینٹر</Link>
                 </div>
                 <nav>
                     <ul id="MenuItems">
                         <li>
-                            <Link className='navLink' to="/">Home</Link>
+                            <Link className='navLink' to="/home">Home</Link>
                         </li>
                         <li>
                         <Link className='navLink' to="/">Cart</Link>

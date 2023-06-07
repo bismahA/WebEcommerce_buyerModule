@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './components/Home';
 import ProductGrid from './components/ProductGrid'
 import ProductDetails from './components/ProductDetails'
+import Auth from "./components/AuthPage"
 
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
       
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Auth />} />
+        
+        <Route path="/home" element={<Home />} />
         <Route path="/productGrid" element={<ProductGrid />} />
         <Route path="/productDetails" element={<ProductDetails />} />
         

@@ -267,5 +267,73 @@ a
   color: white;
 }
 
-/* Rest of the provided CSS styles */
-/* ... */
+
+/* CSS for AuthPage component */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.login-form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h2 {
+  font-family: 'gazB3', sans-serif;
+  color: #99c2ff;
+  font-size: 28px;
+  -webkit-text-stroke: 1px black;
+}
+
+.login-form form,
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  border: none;
+  border-bottom: 1px solid #99c2ff;
+  padding: 5px;
+  font-family: 'gazB', sans-serif;
+  font-size: 20px;
+  color: #99c2ff;
+  background-color: transparent;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus {
+  border-bottom-color: #000000;
+}
+
+button[type='submit'] {
+  width: 150px;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #99c2ff;
+  border-radius: 5px;
+  font-family: 'gazB3', sans-serif;
+  color: #99c2ff;
+  font-size: 24px;
+  -webkit-text-stroke: 1px black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type='submit']:hover {
+  background-color: #99c2ff;
+  color: white;
+}
