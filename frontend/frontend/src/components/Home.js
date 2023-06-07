@@ -47,7 +47,7 @@ const Home = () => {
                             <Link className='navLink' to="/home">Home</Link>
                         </li>
                         <li>
-                        <Link className='navLink' to="/">Cart</Link>
+                        <Link className='navLink' to="/cart">Cart</Link>
                         </li>
                     </ul>
                 </nav>

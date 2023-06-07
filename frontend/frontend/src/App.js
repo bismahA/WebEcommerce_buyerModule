@@ -4,6 +4,7 @@ import Home from './components/Home';
 import ProductGrid from './components/ProductGrid'
 import ProductDetails from './components/ProductDetails'
 import Auth from "./components/AuthPage"
+import Cart from "./components/Cart"
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/productGrid" element={<ProductGrid />} />
         <Route path="/productDetails" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+
         
         
         {/* Add more routes as needed */}
